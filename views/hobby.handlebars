@@ -1,63 +1,64 @@
 {{!-- --Navbar-- --}}
 
- <nav id="nav">
-      {{! Header }}
-<div id="header-container">
-      <header id="header"> 
-        
-      </header>
-      <ul>
+<nav id="nav">
+  {{! Header }}
+  <div id="header-container">
+    <header id="header">
 
-        <li><a href="/">Home</a></li>
-        <li><a href="/pageOne">Page One</a></li>
-        {{#if loggedIn}}
-          <li><a href="#" id="logout">Logout</a></li>
-        {{else}}
-          <li><a href="/login">Login</a></li>
-        {{/if}}
-      </ul>
-    </nav>
-    </div>
+    </header>
+    <ul>
+
+      <li><a href="/">Home</a></li>
+      <li><a href="/pageOne">Page One</a></li>
+      {{#if loggedIn}}
+      <li><a href="#" id="logout">Logout</a></li>
+      {{else}}
+      <li><a href="/login">Login</a></li>
+      {{/if}}
+    </ul>
+</nav>
+</div>
 
 
 
 <div>
-    <h1 class="campfire">Welcome to the {{hobby_name}} Campfire!</h1>
-    <section class="post-list">
-        <h3>Posts</h3>
-        {{#each posts}}
-        <article class="post">
-                <div class="post-votes">
-                    <button class="upvote">▲</button>
-                    <span class="vote-count">{{votes}}</span>
-                    <button class="downvote">▼</button>
-                </div>
-                <div class="post-content">
-                    <h2 class="post-title"><a href="/post/{{id}}">{{title}}</a></h2>
-                    <p class="post-meta">Posted by u/{{user.username}} on {{created_at}}</p>
-                    <div class="post-body">
-                        {{!-- FUTURE DEVELOPMENT}}
-                        {{!-- {{#if isImage}}
-                        <img src="{{imageUrl}}" alt="{{title}}">
-                        {{else}}
-                          {{/if}}--}}
-                       
-                        <p>{{{message}}}</p>
-                    </div>
-                    <div class="post-comments">
-                        {{!-- FUTURE DEVELOPMENT - CUSTOM HELPER FOR NUMBER OF COMMENTS --}}
-                        <a href="/post/{{id}}/comments"> 12 comments</a>
-                    </div>
-                    <div class="Post">
-                        <form id="new-Post-form">
-                            <label form="Post">Start a new Post Here</label>
-                            <input type="text" id="post-title"  ></input>
-                            <input type="text" id="post-message" ></input>
-                            <button type="submit" id="login-btn">Post</button>
-                        </form>
-                </div>
-            </article>
-        {{/each}}
-    </section>
+  <h1 class="campfire">Welcome to the {{hobby_name}} Campfire!</h1>
+  <section class="post-list">
+    <h3>Posts</h3>
+    {{#each posts}}
+    <article class="post">
+      <div class="post-votes">
+        <button class="upvote">▲</button>
+        <span class="vote-count">{{votes}}</span>
+        <button class="downvote">▼</button>
+      </div>
+      <div class="post-content">
+        <h2 class="post-title"><a href="/post/{{id}}">{{title}}</a></h2>
+        <p class="post-meta">Posted by u/{{user.username}} on {{created_at}}</p>
+        <div class="post-body">
+          {{!-- FUTURE DEVELOPMENT}}
+          {{!-- {{#if isImage}}
+          <img src="{{imageUrl}}" alt="{{title}}">
+          {{else}}
+          {{/if}}--}}
+
+          <p>{{{message}}}</p>
+        </div>
+        <div class="post-comments">
+          {{!-- FUTURE DEVELOPMENT - CUSTOM HELPER FOR NUMBER OF COMMENTS --}}
+          <a href="/post/{{id}}/comments"> 12 comments</a>
+        </div>
+
+      </div>
+    </article>
+    {{/each}}
+    <div class="Post">
+      <form id="new-Post-form">
+        <label form="Post">Start a new Post Here</label>
+        <input type="text" id="post-title"></input>
+        <input type="text" id="post-message"></input>
+        <button type="submit" id="login-btn">Post</button>
+      </form>
+  </section>
 </div>
-<script src ="/js/hobby.js"></script>
+<script src="/js/hobby.js"></script>
