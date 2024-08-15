@@ -1,0 +1,141 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f7f8;
+    color: #1a1a1b;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #0079d3;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hobby-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.hobby-description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Main content styles */
+main {
+    display: flex;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.post-list {
+    flex: 3;
+    margin-right: 20px;
+}
+
+.post {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px;
+    display: flex;
+}
+
+.post-votes {
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.post-votes button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #878a8c;
+}
+
+.post-votes button:hover {
+    color: #0079d3;
+}
+
+.vote-count {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+}
+
+.post-content {
+    flex: 1;
+}
+
+.post-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.post-meta {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.post-body p {
+    margin: 0;
+}
+
+.post-body img {
+    max-width: 100%;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.post-comments a {
+    font-size: 14px;
+    color: #0079d3;
+}
+
+
+
+/* Footer styles */
+footer {
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+}

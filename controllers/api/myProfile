@@ -1,0 +1,28 @@
+const router = require("express").Router();
+const {Comment, Event,Hobby,Post} = require("../../models/");
+
+// Middleware to check if the user is logged in
+const isAuthenticated = (req, res, next) => {
+    if (req.session.user_id) {
+        return next();
+    } else {
+        res.redirect('/login'); // Redirect to login if not authenticated
+    }
+};
+
+router.get('/myProfile/username:', isAuthenticated, async (req, res) => {
+    try {
+        // Fetch all comments made by the logged-in user
+        const comments = await Comment.findAll({
+            where: { user_id: req.session.user_id } // Filter by user_id in session
+        });
+
+        // Render the profile template with the user's comments
+        res.render('profile', { user: req.session.user, post: req.session.user.posts, comments: req.session.user.comments, event: req.session.user.event  }); // Also passing user info
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: 'Failed to load comments' });
+    }
+});
+
+module.exports = router;

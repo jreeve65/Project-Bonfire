@@ -1,0 +1,16 @@
+[
+  { "username": "yennefer", "password": "testtest", "email": "yennefer@example.com" },
+  { "username": "geralt", "password": "testtest", "email": "geralt@example.com" },
+  { "username": "ciri", "password": "testtest", "email": "ciri@example.com" },
+  { "username": "triss", "password": "testtest", "email": "triss@example.com" },
+  { "username": "dandelion", "password": "testtest", "email": "dandelion@example.com" },
+  { "username": "zoltan", "password": "testtest", "email": "zoltan@example.com" },
+  { "username": "vesemir", "password": "testtest", "email": "vesemir@example.com" },
+  { "username": "eskell", "password": "testtest", "email": "eskell@example.com" },
+  { "username": "regis", "password": "testtest", "email": "regis@example.com" },
+  { "username": "milva", "password": "testtest", "email": "milva@example.com" },
+  { "username": "angouleme", "password": "testtest", "email": "angouleme@example.com" },
+  { "username": "coen", "password": "testtest", "email": "coen@example.com" },
+  { "username": "keira", "password": "testtest", "email": "keira@example.com" },
+  { "username": "shani", "password": "testtest", "email": "shani@example.com" }
+]

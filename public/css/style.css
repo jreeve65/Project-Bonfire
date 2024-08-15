@@ -1,0 +1,420 @@
+/* any css stylesheets can go in this folder */
+/* hint- remember to import them in your handlebars! */
+
+body {
+  background-image: url('/images/EB3BFBEB-9C2F-4F0E-B0B4-F6BD1DDC6FAE.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+a {
+  color: #ffffff;
+  font-family: "Helvetica",'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Header Section */
+
+footer {
+  background-color: #ff4500; /* Orange background */
+  color: #ffffff; /* White text */
+  font-family: "Helvetica",'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-align: center;
+  padding: 20px;
+  border-top: 3px solid #ffffff; /* Thin white border at the top */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+footer p {
+  font-size: 14px;
+  margin: 5px 0;
+}
+/* 
+#nav {
+  display: flex;
+  justify-content: center;
+  background-color: #FFA500;
+  border-radius: 5px;
+}
+
+nav a {
+  color: #B9C6AE;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a {
+  color: #b9c6ae;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+#nav > ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+#nav > ul > li {
+  margin: 0 10px;
+}
+
+/* #nav > ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+#nav > ul > li {
+  margin: 0 10px;
+} */ */
+
+/* Header Section */
+header h1 {
+  display: inline;
+  font-size: 3em;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.headertitle {
+  background-color: rgb(33, 54, 98);
+  display: block;
+  width: 100%;
+}
+
+header nav {
+  padding-top: auto;
+  font-family: "Helvetica",'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 1em;
+  float: right;
+  color: white;
+}
+
+#backblu {
+  height: 200px;
+  width: 100%;
+}
+/* Menu Bar Sectoin */
+
+#header-container {
+    display: flex;
+    justify-content: space-between; /* Distributes space between the header and the list */
+    align-items: center; /* Aligns the items vertically */
+    padding: 10px;
+    background-color: #ff4500; /* Optional: Background color to match your theme */
+}
+
+#header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #ffffff; /* Optional: White text to match your theme */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li {
+    margin-left: 20px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Optional: White text to match your theme */
+    font-size: 16px;
+}
+
+/* login form  */
+#login-header {
+  
+    display: flex;
+    justify-content: center;
+}
+
+#login-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #FFFFFF; /* White text for readability */
+}
+
+#login-form input[type="text"],
+#login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f9f9f9; /* Light background for input fields */
+  color: #000; /* Black text inside inputs for readability */
+}
+
+#login-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #FF4500; /* Campfire color */
+  color: #FFFFFF; /* White text */
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#login-form button:hover {
+  background-color: #FFA500; /* Food Stand Awning color */
+}
+
+#login-form h2 {
+  color: #FFD700; /* Flag color for heading */
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#login-form a {
+  color: #4682B4; /* Tent color for the signup link */
+  text-decoration: none;
+  justify-content: center;
+}
+
+#login-form a:hover {
+  text-decoration: underline;
+  justify-content: center;
+}
+
+
+
+/* signup form  */
+
+#signup-form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  color: #FFFFFF;
+}
+
+#signup-form input[type="text"],
+#signup-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f9f9f9;
+  color: #000;
+}
+
+#signup-form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #FF4500;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+#signup-form button:hover {
+  background-color: #FFA500;
+  text-decoration: underline;
+}
+
+#singup-header {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+/* Hobbies */
+
+.hobbies-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+h1 {
+  color: #ffffff  ; /* White color for the header */
+}
+
+.hobbies-container a {
+  display: block;
+  padding: 10px;
+  border: 2px solid #e16a34; /* Bright orange border */
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: rgba(225, 106, 52, 0.8); /* Less transparent bright orange background */
+  text-decoration: none;
+  color: #f0e9be; /* Light beige font color */
+  font-weight: bold;
+  border-radius: 15px; /* Rounded edges */
+}
+
+.hobbies-container a:hover {
+  background-color: #e16a34; /* Solid bright orange on hover */
+  color: #fff; /* White text on hover */
+}
+
+/* .Post {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px; /* Adjust height as needed */
+  padding: 20px;
+  border: 2px solid #e16a34; /* Optional: border for styling */
+  border-radius: 10px; /* Optional: rounded corners */
+}
+
+
+
+/* Post Session */
+
+.post-container {
+  background-color: #ffffff;
+  max-width: 900px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.post-header {
+  text-align: center;
+  background-color: #e16a34;
+  color: #ffffff;
+  padding: 20px;
+  position: relative;
+}
+
+.post-header h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.post-details {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.post-details h3 {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.post-details p {
+  font-size: 16px;
+  color: #777777;
+  margin: 5px 0;
+}
+
+/* .post-comments {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.post-comments h3 {
+  font-size: 18px;
+  color: #333333;
+  margin-bottom: 15px;
+} */
+
+/* .comment {
+  background-color: #f9f9f9;
+  border-left: 4px solid #e16a34;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+} */
+
+/* .comment p {
+  font-size: 16px;
+  color: #555555;
+  margin: 0 0 5px;
+}
+
+.comment span {
+  font-size: 14px;
+  color: #888888;
+} */
+
+.new-post {
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+#new-Post-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#new-Post-form label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+#new-Post-form textarea {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  resize: none;
+  min-height: 100px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#new-Post-form button {
+  padding: 10px 20px;
+  background-color: #e16a34;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#new-Post-form button:hover {
+  background-color: #c7502b;
+}

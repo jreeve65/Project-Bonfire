@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{hobbyName}} - hobby</title>
+    <link rel="stylesheet" href="/public/css/hobbyPage.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="hobby-name">r/{{hobby}}</h1>
+            <p class="hobby-description">{{hobby description}}</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="post-list">
+            {{#each posts}}
+            <article class="post">
+                <div class="post-votes">
+                    <button class="upvote">▲</button>
+                    <span class="vote-count">{{votes}}</span>
+                    <button class="downvote">▼</button>
+                </div>
+                <div class="post-content">
+                    <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+                    <p class="post-meta">Posted by u/{{user.username}} on {{postedDate}}</p>
+                    <div class="post-body">
+                        {{#if isImage}}
+                        <img src="{{imageUrl}}" alt="{{title}}">
+                        {{else}}
+                        <p>{{{content}}}</p>
+                        {{/if}}
+                    </div>
+                    <div class="post-comments">
+                        <a href="{{commentsUrl}}">{{commentCount}} comments</a>
+                    </div>
+                </div>
+            </article>
+            {{/each}}
+        </section>
+    </main>
+<script src="/public/js/hobbyPage.js"></script>
+    <footer>
+        <p>hobby - {{hobby_name}}</p>
+    </footer>
+</body>
+</html>

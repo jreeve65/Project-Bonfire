@@ -1,0 +1,59 @@
+<link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet" />
+
+{{!-- --Navbar-- --}}
+
+ <nav id="nav">
+      {{! Header }}
+<div id="header-container">
+      <header id="header"> 
+        
+      </header>
+      <ul>
+
+        <li><a href="/">Home</a></li>
+        <li><a href="/pageOne">Page One</a></li>
+        {{#if loggedIn}}
+          <li><a href="#" id="logout">Logout</a></li>
+        {{else}}
+          <li><a href="/login">Login</a></li>
+        {{/if}}
+      </ul>
+    </nav>
+    </div>
+
+
+<div class="hobbies-container">
+    {{!-- Reminder: examples comes from the data being passed in the res.render on homeRoutes.js! --}}
+    {{#if loggedIn }}
+  <h1>Welcome {{username}} here are your hobbies:</h1>
+
+  {{#each hobbyArray}}
+  {{!-- Reminder- this is a partial! Handlebars will render the code located in items.handlebars in the /partials/ directory! --}}
+    <a href="/api/hobbies/{{id}}"><header>{{hobby_name}}</header></a>
+  {{/each}}
+  {{else}}
+  <h1>Welcome to Bonfire</h1>
+  <h3>It looks like you havent logged in yet click here: <a href="/login">Login</a></h3>
+  {{/if}}
+</div>
+{{!-- <div>
+  {{> thread}}
+</div> --}}
+{{!-- <div>
+  <div>
+    <h2>Create New Message</h2>
+  </div>
+  <form id="new-data-form">
+    <label for="data-message">Message</label>
+    <textarea name="data-message" ></textarea>
+
+    <button type="submit">Create</button>
+  </form>
+</div> --}}
+
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+<script>
+  introJs().start();
+</script>
+
+<script src="/js/newData.js"></script>

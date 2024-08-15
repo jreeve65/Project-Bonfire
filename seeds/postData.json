@@ -1,0 +1,129 @@
+[
+    {
+      "title": "Gardening Tips for Beginners",
+      "message": "Here are some great tips for starting your own garden.",
+      "hobby_id": 1,
+      "user_id": 1
+    },
+    {
+      "title": "Amazing Photography Locations",
+      "message": "Discover the best places for stunning photography.",
+      "hobby_id": 4,
+      "user_id": 2
+    },
+    {
+      "title": "Cycling Gear Essentials",
+      "message": "What you need to get started with cycling.",
+      "hobby_id": 3,
+      "user_id": 3
+    },
+    {
+      "title": "Delicious Baking Recipes",
+      "message": "Try these easy and tasty baking recipes.",
+      "hobby_id": 16,
+      "user_id": 4
+    },
+    {
+      "title": "Best Yoga Practices",
+      "message": "Improve your yoga practice with these tips.",
+      "hobby_id": 12,
+      "user_id": 5
+    },
+    {
+      "title": "Introduction to Pottery",
+      "message": "Learn the basics of pottery and get started.",
+      "hobby_id": 13,
+      "user_id": 6
+    },
+    {
+      "title": "Chess Strategies for Beginners",
+      "message": "Enhance your chess skills with these strategies.",
+      "hobby_id": 14,
+      "user_id": 7
+    },
+    {
+      "title": "Guide to Model Building",
+      "message": "Tips and tricks for successful model building.",
+      "hobby_id": 21,
+      "user_id": 8
+    },
+    {
+      "title": "Essential Knitting Techniques",
+      "message": "Learn the fundamental techniques of knitting.",
+      "hobby_id": 9,
+      "user_id": 9
+    },
+    {
+      "title": "The Art of Mixology",
+      "message": "Create amazing cocktails with these mixology tips.",
+      "hobby_id": 30,
+      "user_id": 10
+    },
+    {
+      "title": "How to Start Homebrewing",
+      "message": "Get started with homebrewing your own beer.",
+      "hobby_id": 42,
+      "user_id": 11
+    },
+    {
+      "title": "Bird Watching Essentials",
+      "message": "Everything you need to know to start bird watching.",
+      "hobby_id": 18,
+      "user_id": 12
+    },
+    {
+      "title": "Exploring Historical Reenactments",
+      "message": "Discover the world of historical reenactments.",
+      "hobby_id": 47,
+      "user_id": 13
+    },
+    {
+      "title": "Creating Beautiful Calligraphy",
+      "message": "Tips for mastering the art of calligraphy.",
+      "hobby_id": 37,
+      "user_id": 1
+    },
+    {
+      "title": "Top Hiking Trails Near You",
+      "message": "Explore the best hiking trails in your area.",
+      "hobby_id": 8,
+      "user_id": 2
+    },
+    {
+      "title": "Getting Started with Digital Art",
+      "message": "A beginner's guide to digital art tools and techniques.",
+      "hobby_id": 51,
+      "user_id": 3
+    },
+    {
+      "title": "The Joy of Scrapbooking",
+      "message": "How to create beautiful and memorable scrapbooks.",
+      "hobby_id": 20,
+      "user_id": 4
+    },
+    {
+      "title": "Wine Tasting Basics",
+      "message": "Learn the fundamentals of wine tasting.",
+      "hobby_id": 35,
+      "user_id": 5
+    },
+    {
+      "title": "Virtual Reality Gaming Setup",
+      "message": "Everything you need to know to set up VR gaming.",
+      "hobby_id": 49,
+      "user_id": 6
+    },
+    {
+      "title": "Creative Candle Making",
+      "message": "Step-by-step guide to making your own candles.",
+      "hobby_id": 25,
+      "user_id": 7
+    },
+    {
+      "title": "Mastering Origami",
+      "message": "Techniques for creating intricate origami designs.",
+      "hobby_id": 23,
+      "user_id": 8
+    }
+  ]
+  

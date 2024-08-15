@@ -1,0 +1,31 @@
+<link href="https://unpkg.com/intro.js/minified/introjs.min.css" rel="stylesheet" />
+
+<div>
+  <div >
+    <h2 class="flex" id="singup-header">Sign Up</h2>
+  </div>
+  <div id="signup" role="tabpanel">
+    <form id="signup-form">
+      <div>
+        <label for="username-input-signup" data-title="Username" data-Intro="This will be used for signin and seen by members when you make posts">Username</label>
+        <input type="text" id="username-input-signup" />
+      </div>
+      <div>
+        <label for="email-input-signup" data-title="Email" data-intro="We will not use this address from any marketing towards you.">Email</label>
+        <input type="text" id="email-input-signup" />
+      </div>
+      <div>
+        <label for="password-input-signup" data-title="Passwords" data-intro="Keep your password hidden and safe. Thank You!">Password</label>
+        <input type="password" id="password-input-signup" />
+      </div>
+      <button type="submit" id="signup-btn">Signup!</button>
+      <a href="/login">Login instead</a>
+    </form>
+  </div>
+</div>
+
+<script src="/js/signup.js"></script>
+<script src="https://unpkg.com/intro.js/minified/intro.min.js"></script>
+<script>
+  introJs().start();
+</script>
