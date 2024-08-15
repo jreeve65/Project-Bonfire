@@ -5,9 +5,9 @@ const addPost = async function (event) {
     event.preventDefault();
     const messageEl = document.querySelector('#post-message').value.trim();
     const titleEl = document.querySelector('#post-title').value.trim();
-    const urlParts = window.location.pathname.split('/');
+    const urlParts = window.location.href.split('/');
     const hobbyName = urlParts[urlParts.length-1];
-    
+    console.log(urlParts);
     const post = {
         title: titleEl,
         message: messageEl,
@@ -19,9 +19,9 @@ const addPost = async function (event) {
         body: JSON.stringify({ post }),
         headers: { "Content-Type": "application/json" }
     })
-    if(response.ok){
-        document.location.reload();
-    }
+    // if(response.ok){
+    //     document.location.reload();
+    // }
     
 }
 document.querySelector('#new-Post-form').addEventListener("submit", addPost)
