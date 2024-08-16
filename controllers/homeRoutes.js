@@ -47,50 +47,6 @@ router.get("/", async (req, res) => {
   }
 });
 
-// Get a post and all comments linked to it
-router.get("/post/:id", async (req, res) => {
-  try {
-    const postWithComments = await Post.findByPk(req.params.id, {
-      attributes: ["id", "message", "user_id", "created_at"],
-      include: [
-        {
-          model: User,
-          attributes:["username"],
-        },
-        {
-          model: Comment,
-          attributes: ["id", "message", "post_id"],
-          include: [{ model: User, attributes: ["username"] }],
-        },
-      ],
-    });
-    if (!postWithComments) {
-      return res.status(404).json({ error: "Post not found" });
-    }
-    
-    const thread = postWithComments.get({ plain: true });
-    
-
-    const comments = thread.comments || [];
-    
-
-    const commentArray = comments.map((comment) => comment);
-
-    
-    res.render("single-post", {
-      thread,
-      postWithComments,
-      commentArray,
-      comments,
-      // username: comments.user.username
-      // loggedIn: req.session.logged_in,
-      // username: req.session.username,
-    });
-  } catch (err) {
-    console.log(err);
-    res.status(500).json(err);
-  }
-});
 
 // add a get /login route here
 router.get("/login", (req, res) => {

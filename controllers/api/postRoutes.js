@@ -1,7 +1,7 @@
 const router = require("express").Router();
 
 // import any models you plan to use for this data's routes here
-const { Post, Comment, Hobby } = require("../../models");
+const { Post, Comment, Hobby,User } = require("../../models");
 
 // GET all posts
 router.get("/", async (req, res) => {
@@ -68,52 +68,45 @@ router.delete("/:id", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const postWithComments = await Post.findByPk(req.params.id, {
+      attributes: ["id", "message", "user_id", "created_at"],
       include: [
         {
+          model: User,
+          attributes:["username"],
+        },
+        {
           model: Comment,
-          required: false,
+          attributes: ["id", "message", "post_id"],
+          include: [{ model: User, attributes: ["username"] }],
         },
       ],
     });
-
     if (!postWithComments) {
       return res.status(404).json({ error: "Post not found" });
     }
-    res.status(200).json(postWithComments);
+    
+    const thread = postWithComments.get({ plain: true });
+    
+
+    const comments = thread.comments || [];
+    
+
+    const commentArray = comments.map((comment) => comment);
+
+    
+    res.render("single-post", {
+      thread,
+      postWithComments,
+      commentArray,
+      comments,
+      // username: comments.user.username
+      // loggedIn: req.session.logged_in,
+      // username: req.session.username,
+    });
   } catch (err) {
-    console.error(err);
-    res.status(500).json({ error: "Failed to load post and comments" });
+    console.log(err);
+    res.status(500).json(err);
   }
 });
-
-// } catch (err) {
-//   res.status(500).json(err);
-// }});
-// idk what the below does.
-// router.post('/', async (req, res) => {
-//     try {
-//         const postData = await Post.create(req.body,
-//             { post_title: req.body.post_title,
-//               post_content: req.body.post_content,
-//               user_id: req.session.user_id
-//             });
-//             res.status(200).json(postData);
-//     } catch (err) {
-//         res.status(400).json(err);
-//     }
-// });
-
-// router.get('/:id', async (req, res) => {
-//     try {
-//         // Example: Fetch all post
-//         const post = await Post.findByPk();
-//         console.log(post);
-//         // res.render('all', { post });
-//         res.status(200).json(post); // Pass post to the template
-//     } catch (err) {
-//         console.error(err);
-//         res.status(500).json({ error: 'Failed to load post' });
-//     }
-// });
 
 module.exports = router;
