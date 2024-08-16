@@ -3,7 +3,7 @@
 
 const addPost = async function (event) {
     event.preventDefault();
-    const messageEl = document.querySelector('#post-message').value.trim();
+    const messageEl = document.querySelector('#post-message').value.trim();//
     const titleEl = document.querySelector('#post-title').value.trim();
     const urlParts = window.location.href.split('/');
     const hobbyName = urlParts[urlParts.length-1];
